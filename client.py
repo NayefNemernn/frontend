@@ -3,7 +3,7 @@ import yaml
 
 def load_config():
     with open(os.path.join(os.path.dirname(__file__), '../config.yaml'), 'r') as file:
-        config = yaml.load(file, Loader=yaml.FullLoader)
+         config = yaml.load(file, Loader=yaml.FullLoader)
     return config
-config = load_config
-print(f'Server IP Address: {config['ServerIPAddress']}')
+config = load_config()
+print(f"Server IP Address: {config['ServerIPAddress']}")
